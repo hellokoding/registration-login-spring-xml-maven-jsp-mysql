@@ -43,7 +43,7 @@
         <spring:bind path="password">
             <div class="form-group ${status.error ? 'has-error' : ''}">
                 <form:input type="password" path="password" class="form-control" placeholder="Password"></form:input>
-                <form:errors path="password" cssClass="has-error"></form:errors>
+                <form:errors path="password"></form:errors>
             </div>
         </spring:bind>
 
@@ -51,7 +51,7 @@
             <div class="form-group ${status.error ? 'has-error' : ''}">
                 <form:input type="password" path="passwordConfirm" class="form-control"
                             placeholder="Confirm your password"></form:input>
-                <form:errors path="passwordConfirm" cssClass="has-error"></form:errors>
+                <form:errors path="passwordConfirm"></form:errors>
             </div>
         </spring:bind>
 

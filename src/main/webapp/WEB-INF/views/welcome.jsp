@@ -16,7 +16,6 @@
     <title>Create an account</title>
 
     <link href="${contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
-    <link href="${contextPath}/resources/css/common.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -24,13 +23,18 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-
 <body>
-
 <div class="container">
-    <div class="center-block">
-        Hello ${username}
-    </div>
+
+    <c:if test="${pageContext.request.userPrincipal.name != null}">
+        <form id="logoutForm" method="POST" action="${contextPath}/logout">
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+        </form>
+
+        <h2>Welcome ${pageContext.request.userPrincipal.name} | <a onclick="document.forms['logoutForm'].submit()">Logout</a></h2>
+
+    </c:if>
+
 </div>
 <!-- /container -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

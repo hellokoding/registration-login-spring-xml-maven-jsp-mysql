@@ -17,8 +17,6 @@ public class UserServiceImpl implements UserService {
     private RoleRepository roleRepository;
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
-    @Autowired
-    private SecurityService securityService;
 
     @Override
     public void save(User user) {

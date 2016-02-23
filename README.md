@@ -10,6 +10,7 @@ http://hellokoding.com/registration-and-login-example-with-spring-xml-configurat
 
 ## Stack
 - Spring MVC
+- Spring Security
 - Spring Data JPA
 - Maven
 - JSP

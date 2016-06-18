@@ -40,6 +40,14 @@
             </div>
         </spring:bind>
 
+        <spring:bind path="email">
+            <div class="form-group ${status.error ? 'has-error' : ''}">
+                <form:input type="text" path="email" class="form-control" placeholder="Email"
+                            autofocus="true"></form:input>
+                <form:errors path="email"></form:errors>
+            </div>
+        </spring:bind>
+
         <spring:bind path="password">
             <div class="form-group ${status.error ? 'has-error' : ''}">
                 <form:input type="password" path="password" class="form-control" placeholder="Password"></form:input>

@@ -8,7 +8,6 @@
     <name>Account Registration Webapp</name>
     <url>http://maven.apache.org</url>
     <properties>
-        <jdk.version>1.8</jdk.version>
         <spring.version>4.2.0.RELEASE</spring.version>
         <spring-security.version>4.0.2.RELEASE</spring-security.version>
         <spring-data-jpa.version>1.8.2.RELEASE</spring-data-jpa.version>
@@ -99,28 +98,17 @@
     </dependencies>
     <build>
         <plugins>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.3</version>
-            <configuration>
-                <source>${jdk.version}</source>
-                <target>${jdk.version}</target>
-            </configuration>
-        </plugin>
-
-        <!-- embedded Jetty server, for testing -->
-        <plugin>
-            <groupId>org.eclipse.jetty</groupId>
-            <artifactId>jetty-maven-plugin</artifactId>
-            <version>9.2.11.v20150529</version>
-            <configuration>
-                <scanIntervalSeconds>10</scanIntervalSeconds>
-                <webApp>
-                    <contextPath>/</contextPath>
-                </webApp>
-            </configuration>
-        </plugin>
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>9.2.11.v20150529</version>
+                <configuration>
+                    <scanIntervalSeconds>10</scanIntervalSeconds>
+                    <webApp>
+                        <contextPath>/</contextPath>
+                    </webApp>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>
